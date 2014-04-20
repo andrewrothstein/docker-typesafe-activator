@@ -18,4 +18,4 @@ RUN rm typesafe-activator-1.1.1.zip
 EXPOSE 8888
  
 # Define an entry point.
-ENTRYPOINT ["/opt/activator/activator", "ui"]
+ENTRYPOINT /opt/activator/activator ui
