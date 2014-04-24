@@ -1,5 +1,5 @@
 #
-# ElasticSearch Dockerfile
+# Typesafe Activator Dockerfile
 #
 # https://github.com/andrewrothstein/typesafe-activator.git
 #
