@@ -10,6 +10,7 @@ FROM andrewrothstein/docker-java
 # Install TypeSafe Activator v1.1.3
  
 RUN cd /opt && wget http://downloads.typesafe.com/typesafe-activator/1.2.10/typesafe-activator-1.2.10.zip
+RUN apt-get install -y unzip
 RUN cd /opt && unzip typesafe-activator-1.2.10.zip
 RUN ln -s /opt/activator-1.2.10 /opt/activator
 RUn rm -f /opt/typesafe-activator-1.2.10.zip
