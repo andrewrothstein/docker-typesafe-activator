@@ -7,13 +7,13 @@
 # Pull base image.
 FROM andrewrothstein/docker-java
  
-# Install TypeSafe Activator v1.2.10
+# Install TypeSafe Activator v1.2.12
  
-RUN cd /opt && wget http://downloads.typesafe.com/typesafe-activator/1.2.10/typesafe-activator-1.2.10.zip
+RUN cd /opt && wget http://downloads.typesafe.com/typesafe-activator/1.2.12/typesafe-activator-1.2.12.zip
 RUN apt-get install -y unzip
-RUN cd /opt && unzip typesafe-activator-1.2.10.zip
-RUN ln -s /opt/activator-1.2.10 /opt/activator
-RUN rm -f /opt/typesafe-activator-1.2.10.zip
+RUN cd /opt && unzip typesafe-activator-1.2.12.zip
+RUN ln -s /opt/activator-1.2.12 /opt/activator
+RUN rm -f /opt/typesafe-activator-1.2.12.zip
  
 # Expose ports.
 EXPOSE 8888
