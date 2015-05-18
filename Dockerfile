@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java8
+FROM docker.io/java:openjdk-8-jdk
 
 ENV ACTIVATOR_VER 1.3.2
  
