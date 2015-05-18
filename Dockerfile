@@ -1,19 +1,14 @@
-#
-# Typesafe Activator Dockerfile
-#
-# https://github.com/andrewrothstein/docker-typesafe-activator.git
-#
+FROM dockerfile/java:oracle-java8
+
+ENV ACTIVATOR_VER 1.3.2
  
-# Pull base image.
-FROM andrewrothstein/docker-java
- 
-# Install TypeSafe Activator v1.2.12
- 
-RUN cd /opt && wget http://downloads.typesafe.com/typesafe-activator/1.2.12/typesafe-activator-1.2.12.zip
 RUN apt-get install -y unzip
-RUN cd /opt && unzip typesafe-activator-1.2.12.zip
-RUN ln -s /opt/activator-1.2.12 /opt/activator
-RUN rm -f /opt/typesafe-activator-1.2.12.zip
+
+RUN cd /opt \
+ && wget http://downloads.typesafe.com/typesafe-activator/${ACTIVATOR_VER}/typesafe-activator-${ACTIVATOR_VER}.zip \
+ && unzip typesafe-activator-${ACTIVATOR_VER}.zip \
+ && ln -s /opt/activator-${ACTIVATOR_VER} /opt/activator \
+ && rm -f /opt/typesafe-activator-${ACTIVATOR_VER}.zip
  
 # Expose ports.
 EXPOSE 8888
