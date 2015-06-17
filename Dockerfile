@@ -1,6 +1,6 @@
 FROM docker.io/java:openjdk-8-jdk
 
-ENV ACTIVATOR_VER 1.3.2
+ENV ACTIVATOR_VER 1.3.4
  
 RUN apt-get install -y unzip
 
