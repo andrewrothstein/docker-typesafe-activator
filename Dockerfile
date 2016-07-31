@@ -14,4 +14,4 @@ RUN cd /opt \
 EXPOSE 8888
  
 # Define an entry point.
-CMD ["/opt/activator/activator", "ui", "-Dhttp.address=0.0.0.0"]
+CMD ["/opt/activator/bin/activator", "ui", "-Dhttp.address=0.0.0.0"]
