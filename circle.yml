@@ -26,7 +26,7 @@ test:
                 --snippetsdir .
                 --snippet from.j2 ansible-playbook.j2 entrypoint.j2 cmd.j2 ports.j2
                 --upstreamgroup andrewrothstein
-                --upstreamapp docker-supervisord
+                --upstreamapp docker-ansible
                 --write ${OS}
                 --build ${OS}
                 --push ${OS}
