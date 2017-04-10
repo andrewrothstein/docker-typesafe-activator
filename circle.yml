@@ -24,9 +24,9 @@ test:
               - >-
                 dcb
                 --snippetsdir .
-                --snippet from.j2 ansible-playbook.j2 entrypoint.j2 cmd.j2 ports.j2
+                --snippet from.j2 ansible-playbook.j2 cmd.j2 ports.j2
                 --upstreamgroup andrewrothstein
-                --upstreamapp docker-ansible
+                --upstreamapp docker-dumb-init
                 --write ${OS}
                 --build ${OS}
                 --push ${OS}
