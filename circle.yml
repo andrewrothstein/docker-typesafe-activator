@@ -1,0 +1,36 @@
+---
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - sudo -H pip install --upgrade pip
+    - sudo -H pip install circleci-helpers dcb==0.0.13
+
+test:
+  override:
+    - ? | 
+          circle-matrix <<"EHD"
+            env:
+              - OS=centos_7
+              - OS=fedora_23
+              - OS=fedora_24
+              - OS=fedora_25
+              - OS=ubuntu_trusty
+              - OS=ubuntu_xenial
+
+            script:
+              - >-
+                dcb
+                --snippetsdir .
+                --snippet from.j2 ansible-playbook.j2 cmd.j2 ports.j2
+                --upstreamgroup andrewrothstein
+                --upstreamapp docker-supervisord
+                --write ${OS}
+                --build ${OS}
+                --push ${OS}
+
+          EHD
+      :
+        parallel: true
