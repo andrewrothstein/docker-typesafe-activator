@@ -1,5 +1,4 @@
 ---
 - hosts: localhost
   roles:
-    - andrewrothstein.dumb-init
     - andrewrothstein.typesafe-activator

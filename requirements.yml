@@ -1,5 +1,3 @@
 ---
-- src: andrewrothstein.dumb-init
-  veresion: v1.0.1
 - src: andrewrothstein.typesafe-activator
   version: v1.0.1
