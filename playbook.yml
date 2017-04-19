@@ -1,4 +1,4 @@
 ---
 - hosts: localhost
   roles:
-    - andrewrothstein.typesafe-activator
+    - role: andrewrothstein.typesafe-activator
